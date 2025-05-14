@@ -1,0 +1,33 @@
+// Este archivo servirá como archivo de configuración de aquellos estilos clave que afectan a toda la web
+
+// reseteo
+// confg fuentes
+// encabezados
+// body, header, main, footer
+// section
+
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+h1{
+    font-size: 4rem;       
+    color: brown;
+    letter-spacing: 10px;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+header, nav, main, footer, section{
+    width: 100%;
+    max-width: 2560px;
+}

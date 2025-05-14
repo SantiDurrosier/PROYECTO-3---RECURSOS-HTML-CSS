@@ -1,0 +1,36 @@
+@use 'config';
+@use 'global';
+
+
+header{
+    width: 100%;
+    height: 100dvh;
+    background-color: aquamarine;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2rem;
+
+    >:nth-child(2){
+        width: 500px;
+        height: 300px;
+        border: 2px solid black;
+        overflow: hidden;
+        &:hover img{
+            transform: scale(1.2);
+            transition: 2s;           
+        }
+        &:active img{
+            filter: sepia(1);
+            transition: 4s;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 1s;            
+        }
+    }
+}
