@@ -6,7 +6,7 @@
 // body, header, main, footer (sus estilos globales de forma)
 // section (estilos genéricos para todas las secciones)
 
-
+// aquí reseteo el css
 * {
   margin: 0;
   padding: 0;
@@ -14,12 +14,82 @@
   box-sizing: border-box;
 }
 
-h1{
-    font-size: 4rem;       
-    color: brown;
-    letter-spacing: 10px;
+// Configuración de fuentes
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-VariableFont_wdth\,wght.ttf');
+}
+@font-face {
+    font-family: 'Staatliches';
+    src: url('../fonts/Staatliches-Regular.ttf');
 }
 
+// Variables del proyecto
+$fuenteTitulos:'Staatliches';
+$fuenteTextos:'Open Sans';
+
+$color00:white;
+$color01: rgb(29, 29, 29);
+$color01bis:rgb(113, 113, 113);
+$color02: rgb(209, 77, 77);
+$color03: rgb(122, 234, 198);
+
+$tablet: 900px;
+$desktop: 1200px;
+
+$padMin: 1.5rem;
+$padMax: 3rem;
+
+
+// Aquí estilos de los encabezados h1, h2, h3, etc y de los textos
+h1, h2, h3{
+    font-family: $fuenteTitulos;
+}
+
+h1{
+    font-size: 4rem;       
+    color: $color02;
+    letter-spacing: 10px;
+}
+h2{
+    color: $color01bis;
+    font-size: 3rem;
+    letter-spacing: 4px;
+}
+h3{
+    color: $color02;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+p{
+    font-family: $fuenteTextos;
+    color: $color01;
+}
+a{
+    font-family: $fuenteTextos;      
+    text-decoration: none;
+}
+
+.boton{
+    padding: 0.7rem 4rem;
+    color: $color00;  
+    background-color: $color02;
+    border-radius: 5px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    border: 1px solid $color00;
+    transition: 0.3s;
+    &:hover{
+        background-color: $color00;
+        color:$color02;
+        border-color: $color02;
+    }
+    &:active{
+        transform: scale(0.95);
+    }
+}
+
+// Estilos básicos de etiquetas principales
 body{
     display: flex;
     flex-direction: column;
@@ -30,4 +100,25 @@ body{
 header, nav, main, footer, section{
     width: 100%;
     max-width: 2560px;
+}
+
+section{
+    padding: 2rem 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+    @media only screen and (min-width:$tablet){
+        &{
+            padding: 4rem 0;
+            row-gap: 3rem;
+        }
+    }
+    @media only screen and (min-width:$desktop){
+        &{
+            padding: 6rem 0;
+            row-gap: 4rem;
+        }
+    }
 }

@@ -5,10 +5,63 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-VariableFont_wdth,wght.ttf");
+}
+@font-face {
+  font-family: "Staatliches";
+  src: url("../fonts/Staatliches-Regular.ttf");
+}
+h1, h2, h3 {
+  font-family: "Staatliches";
+}
+
 h1 {
   font-size: 4rem;
-  color: brown;
+  color: rgb(209, 77, 77);
   letter-spacing: 10px;
+}
+
+h2 {
+  color: rgb(113, 113, 113);
+  font-size: 3rem;
+  letter-spacing: 4px;
+}
+
+h3 {
+  color: rgb(209, 77, 77);
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+p {
+  font-family: "Open Sans";
+  color: rgb(29, 29, 29);
+}
+
+a {
+  font-family: "Open Sans";
+  text-decoration: none;
+}
+
+.boton {
+  padding: 0.7rem 4rem;
+  color: white;
+  background-color: rgb(209, 77, 77);
+  border-radius: 5px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  border: 1px solid white;
+  transition: 0.3s;
+}
+.boton:hover {
+  background-color: white;
+  color: rgb(209, 77, 77);
+  border-color: rgb(209, 77, 77);
+}
+.boton:active {
+  transform: scale(0.95);
 }
 
 body {
@@ -23,10 +76,30 @@ header, nav, main, footer, section {
   max-width: 2560px;
 }
 
+section {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+}
+@media only screen and (min-width: 900px) {
+  section {
+    padding: 4rem 0;
+    row-gap: 3rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  section {
+    padding: 6rem 0;
+    row-gap: 4rem;
+  }
+}
+
 header {
   width: 100%;
   height: 100dvh;
-  background-color: aquamarine;
+  background-color: rgb(122, 234, 198);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,10 +107,15 @@ header {
   row-gap: 2rem;
 }
 header > :nth-child(2) {
-  width: 500px;
+  width: 100%;
   height: 300px;
-  border: 2px solid black;
   overflow: hidden;
+}
+@media only screen and (min-width: 900px) {
+  header > :nth-child(2) {
+    width: 500px;
+    border: 2px solid rgb(29, 29, 29);
+  }
 }
 header > :nth-child(2):hover img {
   transform: scale(1.2);
@@ -52,4 +130,71 @@ header > :nth-child(2) img {
   height: 100%;
   object-fit: cover;
   transition: 1s;
+}
+
+.art01 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  row-gap: 2rem;
+}
+@media only screen and (min-width: 900px) {
+  .art01 {
+    row-gap: 3rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .art01 {
+    width: 80%;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+.art01 > img {
+  width: 100%;
+  max-height: 40dvh;
+  object-fit: cover;
+  object-position: center;
+}
+@media only screen and (min-width: 900px) {
+  .art01 > img {
+    max-height: 50dvh;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .art01 > img {
+    width: 50%;
+    max-height: initial;
+  }
+}
+.art01 > div {
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  row-gap: 1.5rem;
+}
+@media only screen and (min-width: 900px) {
+  .art01 > div {
+    width: 60%;
+    min-width: 700px;
+    padding: 3rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .art01 > div {
+    width: 50%;
+    min-width: initial;
+    padding: 3rem 8rem;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .art01 > div h3 {
+    width: 100%;
+    text-align: left;
+  }
 }/*# sourceMappingURL=main.css.map */
