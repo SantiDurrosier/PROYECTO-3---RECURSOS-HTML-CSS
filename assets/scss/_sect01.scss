@@ -76,7 +76,7 @@
             p{
                 color: c.$color01bis;
             }
-            span{
+            >span{
                 width: 90%;
                 height: 1.5px;
                 background-color: c.$color01bis;
@@ -94,7 +94,7 @@
                        justify-content: space-between;
                     }
                 }
-                .card{
+                .card{                    
                     width: 100%;
                     display: flex;
                     flex-direction: column;
@@ -115,11 +115,14 @@
                     p{
                         font-size: 0.9em;
                     }
+                    
                 }
             }
         }
         // div de la imagen
         >:nth-child(2){
+            overflow: hidden;
+            border-radius: 80px;
             width: 100%;
             height: 40dvh;
             position: relative;
@@ -134,7 +137,12 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                border-radius: 30px;
+                object-position: center;
+                transition: 1s;
+                
+                &:hover{
+                    transform: scale(1.1);
+                }
             }
         }
     }
