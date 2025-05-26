@@ -52,7 +52,8 @@ a {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  column-gap: 1rem;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
 }
 @media only screen and (min-width: 1200px) {
   .h2Especial {
@@ -148,7 +149,8 @@ nav {
 nav > img {
   width: 100px;
   height: 40px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   position: absolute;
   left: 1rem;
   top: 0.5rem;
@@ -162,7 +164,8 @@ nav > ul {
   list-style: none;
   display: flex;
   flex-direction: row;
-  column-gap: 1rem;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
 }
 nav > ul a {
   color: #d14d4d;
@@ -198,14 +201,17 @@ nav .idiomas {
     width: 80%;
     flex-direction: row;
     justify-content: center;
-    column-gap: 6rem;
+    -moz-column-gap: 6rem;
+         column-gap: 6rem;
   }
 }
 .art01 > img {
   width: 100%;
   max-height: 40dvh;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 @media only screen and (min-width: 900px) {
   .art01 > img {
