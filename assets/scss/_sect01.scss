@@ -18,16 +18,7 @@
         &{
             row-gap: 3rem;
         }
-    }
-    h2{
-        width: 100%;
-        text-align: left;
-        @media only screen and (min-width:c.$desktop){
-            &{
-                width: 80%;
-            }
-        }
-    }
+    }    
     article{
         width: 100%;
         display: flex;

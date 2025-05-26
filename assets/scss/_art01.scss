@@ -17,6 +17,7 @@
             width: 80%;
             flex-direction: row;
             justify-content: center;
+            column-gap: 6rem;
         }    
     }
     >img{
@@ -51,23 +52,13 @@
             &{
                 width: 60%;                
                 min-width: 700px;
-                padding: c.$padMax;
             }    
         }
         @media only screen and (min-width:c.$desktop){
             &{
                 width: 50%;
                 min-width: initial;
-                padding: c.$padMax 8rem;
             }    
-        }
-        h3{
-            @media only screen and (min-width:c.$tablet){
-                &{
-                    width: 100%;
-                    text-align: left;
-                }    
-            }
         }
     }
 }
