@@ -205,7 +205,6 @@ footer {
   }
 }
 footer > :nth-child(1) {
-  background-color: rgb(15, 123, 87);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -226,7 +225,6 @@ footer > :nth-child(1) {
   }
 }
 footer > :nth-child(1) .cajaInfo {
-  background-color: brown;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -235,13 +233,31 @@ footer > :nth-child(1) .cajaInfo {
   row-gap: 1.5rem;
 }
 footer > :nth-child(1) .cajaInfo ul {
-  background-color: blue;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
   row-gap: 0.8rem;
 }
+@media only screen and (min-width: 1200px) {
+  footer > :nth-child(1) > :nth-child(1) {
+    align-items: flex-start;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  footer > :nth-child(1) > :nth-child(3) {
+    align-items: flex-end;
+  }
+}
+footer > :nth-child(1) > :nth-child(3) ul {
+  align-items: center;
+}
+@media only screen and (min-width: 800px) {
+  footer > :nth-child(1) > :nth-child(3) ul {
+    align-items: initial;
+  }
+}
 footer > :nth-child(2) {
-  background-color: rgb(176, 27, 114);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -255,6 +271,13 @@ footer > :nth-child(2) {
     max-width: 1000px;
     min-width: 600px;
   }
+}
+footer > :nth-child(2) > :nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  row-gap: 4rem;
 }
 footer a, footer p {
   color: white;
